@@ -119,7 +119,7 @@ Run all of the cells in the notebook.
 
 ## Tasks
 There's only one tasks for this session.
-1. [Analyze-Sentiment-Twitter](nb/analyze-sentiment-twitter.ipynb). 
+1. [Analyze-Sentiment-Twitter](nb/analyze-sentiment-twitter.ipynb)
 
 ## How to Submit GitHub Exercise
 - Make the project public on GitHub.
