@@ -117,6 +117,15 @@ Navigate through the repo in the notebook to find `imports.ipynb` for this week 
 
 Run all of the cells in the notebook.
 
+## Tasks
+There's only one tasks for this session.
+1. [Analyze-Sentiment-Twitter](nb/analyze-sentiment-twitter.ipynb). 
+
+## How to Submit GitHub Exercise
+- Make the project public on GitHub.
+- Submit your repo link on canvas. 
+- Submit your answers to the assignment questions on canvas.
+
 
 ## Background
 Please review the weekly narrative [here](https://www.notion.so/Week-2-Data-Centric-AI-the-AI-Product-Lifecycle-72a84c1517b44fcbb3e6bd11d47477dc#2b73937612bb46559f5b91dc2bf55e7d)
