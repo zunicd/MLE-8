@@ -92,10 +92,10 @@ Enter the following commands in terminal to setup your environment. When prompte
 
 </details>
 
-### Cloning this Repository
+### Forking this Repository
 
 <details>
-     <summary>Clone This Repo</summary>
+     <summary>How to Fork this Repository</summary>
 
      
   1. Within `WSL` or `UNIX`, open your terminal and navigate to a place where you would like to make a directory to hold all your files for this class using the command `cd`. 
@@ -126,14 +126,50 @@ Enter the following commands in terminal to setup your environment. When prompte
   git clone {repo url}
   ```
      
+     
   5. Now let's get into our directory so we can access the contents of the repo!
 
   ```console
   cd {repo name}
   ```
      
-</details>
+  6. Your repository will still be linked to the remote you cloned it from. If you want to integrate new changes from the source, you’ll still want the source remote, but it shouldn’t be the default “origin” remote. So, you’ll want to rename the default remote from `origin` to `upstream`.
+     
+  ```console
+  git remote rename origin upstream
+  ```
+     
+  7. And then add your own remote as the new `origin`, **which you will probably need to make manually if you plan on pushing it back to Github**. See here.
+  
+  ```console
+  git remote add origin https://github.com/author/ForkName
+  ```
 
+
+  8. Once that’s done, you’ll probably need to set the default remote for each branch to your fork.
+  
+  ```console
+  git branch --set-upstream-to origin
+  ```
+  
+  9. To integrate changes, you will need to fetch the upstream remote, checkout the master branch, and rebase to upstream/master
+     
+  ```console
+  git fetch upstream
+
+  git checkout master
+  
+  git rebase upstream/master
+  ```
+     
+  10. After this, you may need to force push if this is the first time rebasing
+  
+  ```console
+  git push -f origin master
+  ```
+     
+     
+</details>
 
 
 ## :rocket: Let's Get Started! 
@@ -175,4 +211,3 @@ There are two tasks for this session. You will find details in each file. To sta
 - [How Pair Programming Really Works](https://cs.wellesley.edu/~webdb/lectures/01-Overview/PairProgramming.pdf)
 - [Cookiecutter: Better Project Templates](https://cookiecutter.readthedocs.io/en/latest/)
 - [CI: Building and Testing Python with GitHub Actions](https://docs.github.com/actions/automating-builds-and-tests/building-and-testing-nodejs-or-python?langId=py)
-
