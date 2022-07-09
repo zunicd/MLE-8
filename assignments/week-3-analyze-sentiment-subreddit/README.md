@@ -12,11 +12,13 @@ In this live coding session, we leverage the Python Reddit API Wrapper (`PRAW`) 
 
 ## ☑️ Objectives
 At the end of this session, you will be able to:
-- [ ] know how to work with APIs
-- [ ] feel more comfortable navigating thru documentation, even inspecting the source code
-- [ ] understand what a `pipeline` object is in HuggingFace
+- [ ] Know how to work with APIs
+- [ ] Feel more comfortable navigating thru documentation, even inspecting the source code
+- [ ] Understand what a `pipeline` object is in HuggingFace
 - [ ] perform sentiment analysis using `pipeline`
-- [ ] run a python script in command line and get the results
+- [ ] Run a python script in command line and get the results
+- [ ] Examine the quality of data
+- [ ] Understand data lineage
 
 
 ## :hammer_and_wrench: Pre-Assignment
