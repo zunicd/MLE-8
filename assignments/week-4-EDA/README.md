@@ -17,7 +17,7 @@ At the end of this session, you will know how to
     ```
     conda activate py39_12
     ```
-2. install the required packages under the current directory: `{Your Local Directory}/MLE-8/assignments/eda-walmart-sales/`
+2. install the required packages under the current directory: `{Your Local Directory}/MLE-8/assignments/week-4-EDA/`
     ```
     pip install -r requirements.txt
     ```
