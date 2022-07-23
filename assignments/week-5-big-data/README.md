@@ -22,13 +22,9 @@ For a video demo how to set up Databricks Community Edition, [watch this short v
 Note: It is NOT the same as Free Trial. Free trial lasts 14 days and Databricks uses compute and storage resources in your account ( AWS / Azure / GCP ).
 
 ### Option II: Google CoLab
-If the first option takes too long, one alternative is to use Google CoLab. Following this [Medium article](https://towardsdatascience.com/getting-started-with-google-colab-f2fff97f594c) to the section **Get coding**. 
+If the first option takes too long, one alternative is to use Google CoLab. Following this [Medium article (https://colab.research.google.com/drive/1jU3IkSTKbB6iHcHr9JYbfp-W0zTRgFWt?usp=sharing) to the section **Get coding**. 
 
-Test it by running this [notebook](https://colab.research.google.com/drive/1u6gYTJ_5dZOudWpkQNXmpk9xdbyoNPbG?usp=sharing) in Google Colab.
-
-
-(This notebook is taken from this [tutorial](https://colab.research.google.com/github/asifahmed90/pyspark-ML-in-Colab/blob/master/PySpark_Regression_Analysis.ipynb#scrollTo=lh5NCoc8fsSO). Please don't use the notebook mentioned in the tutorial as spark version used is outdated.)
-
+Test it by running this [notebook](https://colab.research.google.com/drive/1jU3IkSTKbB6iHcHr9JYbfp-W0zTRgFWt?usp=sharing) in Google Colab.
 
 For the live session, upload the notebooks under nb folder to your Google Drive, make sure you install `Colaboratory` Add-ons, open the notebook with `Google Colaboratory`, and you are ready to go. Check if all dependencies are met by running the imports.ipynb notebook.
 
