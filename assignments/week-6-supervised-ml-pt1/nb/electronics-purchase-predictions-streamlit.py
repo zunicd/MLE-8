@@ -16,7 +16,7 @@ model_results_df = pd.read_csv("../dat/model_results.csv")
 train_df.drop(columns=["year", "month", "Weekend"], inplace=True)
 
 # Create sidebar
-models = ["Logistic Regression", "SVM", "Gradient Boosting Classifier"]
+models = ["Logistic Regression", "SVM", "Gradient Boosting Classifier", "Random Forest"]
 with st.sidebar:
     # Add FB logo
     st.image("https://user-images.githubusercontent.com/37101144/161836199-fdb0219d-0361-4988-bf26-48b0fad160a3.png" )    
@@ -24,7 +24,7 @@ with st.sidebar:
     # Add model select boxes
     model1_select = st.selectbox(
         "Choose Model 1:",
-        ("Logistic Regression", "SVM", "Gradient Boosting Classifier")
+        ("Logistic Regression", "SVM", "Gradient Boosting Classifier", "Random Forest")
     )
     
     # Remove selected model 1 from model list
@@ -133,9 +133,45 @@ with tab2:
 
     st.write(fig2, width = 150)
 
-with tab3:  
+    
+with tab3: 
+    import pickle
+    import shap
+    import matplotlib.pyplot as plt
+ 
+    data_paths_df = pd.read_csv("../dat/data_paths.csv") 
+    
     st.header(model1_select)
+    
+    if (model1_select == 'Gradient Boosting Classifier') | (model1_select == 'Random Forest'):
+        data1_path = data_paths_df[data_paths_df["model"] == model1_select]
+        fi1_path = data1_path['fi_df'].tolist()[0]
+        shap1_path = data1_path['shap_v'].tolist()[0]
+
+        shap1_values = pickle.load(open(shap1_path, 'rb'))
+        
+        fig3 = plt.figure()
+        fig3 = shap.plots.beeswarm(shap1_values)
+        #plt.show()
+        st.pyplot(plt)
+
+        fi1_df = pd.read_csv(fi1_path)
+        st.dataframe(fi1_df)
     
     st.header(model2_select)
 
-    # YOUR CODE GOES HERE!
+    if (model2_select == 'Gradient Boosting Classifier') | (model2_select == 'Random Forest'):
+        data2_path = data_paths_df[data_paths_df["model"] == model2_select]
+        fi2_path = data2_path['fi_df'].tolist()[0]
+        shap2_path = data2_path['shap_v'].tolist()[0]
+
+        shap2_values = pickle.load(open(shap2_path, 'rb'))
+        
+        fig4 = plt.figure()
+        fig4 = shap.plots.beeswarm(shap2_values)
+        #plt.show()
+        st.pyplot(plt)
+        
+        fi2_df = pd.read_csv(fi2_path)
+        st.dataframe(fi2_df)
+   

@@ -1,0 +1,3 @@
+model,fi_df,shap_v
+Gradient Boosting Classifier,../dat/feature_importance_gbt.csv,./shapvalues_gbt.sav
+Random Forest,../dat/feature_importance_rfb.csv,./shapvalues_rfb.sav
